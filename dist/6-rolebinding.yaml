@@ -1,0 +1,14 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: secret-creator-leader-election-rolebinding
+  namespace: secret-creator-system
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: secret-creator-leader-election-role
+subjects:
+  - kind: ServiceAccount
+    name: secret-creator-controller-manager
+    namespace: secret-creator-system

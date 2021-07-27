@@ -1,0 +1,16 @@
+domain: ash.lt
+layout:
+- go.kubebuilder.io/v3
+projectName: secret-creator
+repo: ash.lt/secret-creator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: ash.lt
+  group: api
+  kind: SecretCreator
+  path: ash.lt/secret-creator/api/v1
+  version: v1
+version: "3"
